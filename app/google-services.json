@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247138737015",
+    "project_id": "mirage-mini-project",
+    "storage_bucket": "mirage-mini-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247138737015:android:8fb87e3fafe81aceb81f72",
+        "android_client_info": {
+          "package_name": "com.example.mirage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247138737015-d2tf2mhmtmd3snlg7i9kjcuvgm2m42hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyuoWB3LIuyTaNHeeQGApU64x3wGYvasE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247138737015-d2tf2mhmtmd3snlg7i9kjcuvgm2m42hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
