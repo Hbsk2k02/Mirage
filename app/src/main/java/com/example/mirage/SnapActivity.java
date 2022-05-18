@@ -38,13 +38,15 @@ import com.google.mlkit.vision.text.TextRecognizerOptions;
 public class SnapActivity extends AppCompatActivity {
 
     private ImageView idIVCaptureimage;
-    private TextView idIVDetectedText;
+    //private TextView idIVDetectedText;
     private Button idsnapButton;
     private Button iddetectButton;
     private Bitmap imageBitmap;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
-    private TextToSpeech textToSpeech;
+    //private TextToSpeech textToSpeech;
+
+    String detectedText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,7 @@ public class SnapActivity extends AppCompatActivity {
         idIVCaptureimage = findViewById(R.id.idIVCaptureimage);
         idsnapButton = findViewById(R.id.idsnapButton);
         iddetectButton = findViewById(R.id.iddetectButton);
-        idIVDetectedText = findViewById(R.id.idIVDetectedText);
+        //idIVDetectedText = findViewById(R.id.idIVDetectedText);
 
         idsnapButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,16 +72,17 @@ public class SnapActivity extends AppCompatActivity {
         iddetectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 detectText();
             }
         });
 
-        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-
-            }
-        });
+//        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+//            @Override
+//            public void onInit(int status) {
+//
+//            }
+//        });
     }
 
     private boolean checkPermission() {
@@ -142,8 +145,13 @@ public class SnapActivity extends AppCompatActivity {
                             String elementText = element.getText();
                             result.append(elementText);
                         }
-                        idIVDetectedText.setText(blockText);
-                        textToSpeech.speak(blockText,TextToSpeech.QUEUE_FLUSH,null,null);
+                        //idIVDetectedText.setText(blockText);
+                        //String detectData = blockText;
+                        Intent intent = new Intent(SnapActivity.this,DetectedText.class);
+                        intent.putExtra("Dtext",blockText);
+                        startActivity(intent);
+                        finish();
+                        //textToSpeech.speak(blockText,TextToSpeech.QUEUE_FLUSH,null,null);
                     }
                 }
             }

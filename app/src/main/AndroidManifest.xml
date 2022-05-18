@@ -14,6 +14,9 @@
         android:roundIcon="@drawable/blindpersonicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mirage">
+        <activity
+            android:name=".DetectedText"
+            android:exported="false" />
         <activity android:name=".SnapActivity" />
         <activity
             android:name=".MainActivity"
