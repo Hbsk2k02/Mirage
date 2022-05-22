@@ -44,10 +44,11 @@ public class SnapActivity extends AppCompatActivity {
     private Bitmap imageBitmap;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
-    //private TextToSpeech textToSpeech;
+    private TextToSpeech textToSpeech;
 
     String detectedText;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,17 +73,16 @@ public class SnapActivity extends AppCompatActivity {
         iddetectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 detectText();
             }
         });
 
-//        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
-//            @Override
-//            public void onInit(int status) {
-//
-//            }
-//        });
+        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+
+            }
+        });
     }
 
     private boolean checkPermission() {
@@ -145,8 +145,6 @@ public class SnapActivity extends AppCompatActivity {
                             String elementText = element.getText();
                             result.append(elementText);
                         }
-                        //idIVDetectedText.setText(blockText);
-                        //String detectData = blockText;
                         Intent intent = new Intent(SnapActivity.this,DetectedText.class);
                         intent.putExtra("Dtext",blockText);
                         startActivity(intent);

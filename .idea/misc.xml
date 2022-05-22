@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/drawable-anydpi/audiobutton.xml" value="0.1355" />
+        <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/drawable/backbutton.xml" value="0.1355" />
         <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/drawable/buttonshape.xml" value="0.236" />
-        <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/layout/activity_detected_text.xml" value="0.25" />
+        <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/drawable/floatbuttonshape.xml" value="0.1355" />
+        <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/layout/activity_detected_text.xml" value="0.264" />
         <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/harib/AndroidStudioProjects/Mirage/app/src/main/res/layout/activity_snap.xml" value="0.2359375" />
       </map>
